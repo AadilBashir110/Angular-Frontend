@@ -1,0 +1,9 @@
+<div *ngIf="selectedCourse" class="course-details-container">
+    <h3>Course Details</h3>
+    <p>Name: {{ selectedCourse.name }}</p>
+    <p>Teacher: {{selectedCourse.teacherBean.name}}</p>
+    <p>Email: {{selectedCourse.teacherBean.email}}</p>
+    
+</div>
+
+<!-- <pre>{{selectedCourse|json}}</pre> -->

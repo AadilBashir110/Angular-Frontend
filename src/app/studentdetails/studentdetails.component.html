@@ -1,0 +1,12 @@
+<div *ngIf="selectedStudent" class="student-details-container">
+    <h3>Student Details</h3>
+    <p>Name: {{ selectedStudent.name }}</p>
+    <p>Email: {{ selectedStudent.email }}</p>
+    <ul>
+        <ng-container *ngFor="let item of selectedStudent.courseBean; let i = index">
+            <li>{{i+1}} - {{item.name}}</li>
+        </ng-container>
+    </ul>
+</div>
+
+<!-- <pre>{{selectedStudent|json}}</pre> -->

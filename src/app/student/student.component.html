@@ -1,0 +1,13 @@
+<div class="student-container">
+    <h2>Student List</h2>
+    <button type="button" [routerLink]="'/create-student'">Add Student</button>
+    <ul>
+      <li *ngFor="let student of students">
+        {{ student.name }}
+        <button type="button" [routerLink]="'/student/' + student.id">View</button>
+        <button type="button" [routerLink]="'/update-student/'+ student.id">Edit</button>
+        <button type="button" (click)="onDelete(student.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

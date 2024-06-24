@@ -1,0 +1,93 @@
+// Variables for consistent styling
+$primary-color: #3498db;
+$secondary-color: #ecf0f1;
+$card-bg-color: #ffffff;
+$card-shadow-color: rgba(0, 0, 0, 0.1);
+$hover-bg-color: darken($primary-color, 10%);
+$text-color: #2c3e50;
+$border-radius: 16px;
+$font-family: 'Montserrat', sans-serif;
+
+body {
+  font-family: $font-family;
+  background-color: $secondary-color;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  padding: 40px;
+  background-color: $secondary-color;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: $primary-color;
+    font-size: 2.5em;
+    font-weight: 700;
+    font-family: $font-family;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+
+    .card {
+      background-color: $card-bg-color;
+      border-radius: $border-radius;
+      box-shadow: 0 6px 20px $card-shadow-color;
+      overflow: hidden;
+      width: calc(33.333% - 20px); // Three cards per row with spacing
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      @media (max-width: 768px) {
+        width: calc(50% - 20px); // Two cards per row for tablets
+      }
+
+      @media (max-width: 480px) {
+        width: 100%; // One card per row for mobile
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px $card-shadow-color;
+      }
+
+      .card-body {
+        padding: 30px;
+        text-align: center;
+
+        h3 {
+          font-size: 1.75em;
+          margin-bottom: 15px;
+          color: $text-color;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 2.5em;
+          font-weight: bold;
+          margin: 0;
+          color: $primary-color;
+        }
+      }
+
+      a {
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+        background-color: $primary-color;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $hover-bg-color;
+        }
+      }
+    }
+  }
+}

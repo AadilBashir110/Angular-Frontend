@@ -1,0 +1,10 @@
+<div *ngIf="selectedTeacher" class="teacher-details-container">
+    <h3>Teacher Details</h3>
+    <p>Name: {{ selectedTeacher.name }}</p>
+    <p>Email: {{ selectedTeacher.email }}</p>
+    <ul>
+        <ng-container *ngFor="let item of selectedTeacher.courseBean; let i = index">
+            <li>{{i+1}} - {{item.name}}</li>
+        </ng-container>
+    </ul>
+</div>

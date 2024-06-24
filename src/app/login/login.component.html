@@ -1,0 +1,17 @@
+<div class="login-page">
+    <header class="header">
+      <h1>Arittek University</h1>
+    </header>
+    <main class="login-container">
+      <h2>Login</h2>
+      <form #login="ngForm" (ngSubmit)="userLogin(login.value)">
+        <input type="text" name="username" ngModel placeholder="Username" class="form-input"> <br><br>
+        <input type="password" name="password" ngModel placeholder="Password" class="form-input"> <br><br>
+        <button type="submit" class="login-button">Login</button>
+      </form>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2024 Arittek University. All rights reserved.</p>
+    </footer>
+  </div>
+  

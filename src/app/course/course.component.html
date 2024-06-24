@@ -1,0 +1,15 @@
+<div class="course-container">
+    <h2>Course List</h2>
+    <button type="button" [routerLink]="'/create-course'">Add Course</button>
+    <ul>
+      <li *ngFor="let course of courses">
+        {{ course.name }}
+        <button type="button" [routerLink]="'/course/' + course.id">View</button>
+        <button type="button" [routerLink]="'/update-course/'+ course.id">Edit</button>
+        <button type="button" (click)="onDelete(course.id)">Delete</button> 
+        <button type="button" (click)="enrollCourse(course.id)">Enroll</button>
+        <button type="button" >Assign Teacher</button>
+      </li>
+    </ul>
+  </div>
+  
